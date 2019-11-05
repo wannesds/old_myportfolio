@@ -1,1 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+
+
+$primary: rgb(32, 32, 32);
+$secundary: rgb(28, 34, 28);
+$accent: greenyellow;
+$accentDark: rgb(54, 54, 54);
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.stroke {
+    height: 0.25em;
+    background-color: $accentDark;
+}
+
+header {
+    background: $primary;
+    padding:0.5em 0;
+    width: 100%;
+
+    a {
+         width: 5em;
+         height: 5em;
+         display: inline-block;
+
+         &:hover {
+            // background: lighten($primary, 20%);
+        }
+    }
+
+    .logo{  
+        background-image: url(../src/assets/images/logo2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        &:hover {
+            background-image: url(../src/assets/images/logo2Hover.png);
+        }
+    }
+
+    nav {
+        float: right;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+
+            li a {
+                margin-left: 1em;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: limegreen;
+                
+
+                &:hover {
+                    //background: lighten($primary, 20%);
+                    color: greenyellow;
+                
+                }
+                
+            }
+        }
+    }
+}
+
+body {
+    background: rgb(61, 63, 60);
+    margin: 0;
+    font-family: 'Nunito', 'sans-serif';
+
+    .content {
+        background-color: $secundary;
+        color: rgba(83, 252, 5, 0.5);
+        padding: 0.5em;
+        margin: 1em;
+    }
+}
+
+footer {
+    background-color: $primary;
+    height: 5em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
