@@ -3,17 +3,22 @@
     <a routerLink="/" class="logo"></a>
     <nav>
       <ul>
-        <li><a href="#" class="current" routerLink="/">HOME</a></li>
-        <li><a href="#" class="current"routerLink="/about">ABOUT</a></li>
-        <li><a href="#" class="current"routerLink="/work">WORK</a></li>
-        <li><a href="#" class="current"routerLink="/contact">CONTACT</a></li>
+        <li><a href="#" routerLink="/" routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}">HOME</a></li>
+        <li><a href="#" routerLink="/about" routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}">ABOUT</a></li>
+        <li><a href="#" routerLink="/work" routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}">WORK</a></li>
+        <li><a href="#" routerLink="/contact" routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}">CONTACT</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<div class="stroke"></div>
-
 <div class="container" class="content">
   <router-outlet></router-outlet>
 </div>
+
+
+
