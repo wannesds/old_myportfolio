@@ -1,18 +1,21 @@
 <header>
   <div class="container">
     <a routerLink="/" class="logo"></a>
-    <nav>
+    <nav id="idNav">
       <ul>
+        <li><a href="javascript:void(0);" class="icon" (click)="OpenVertNav()">&#9776;</a></li>
+
         <li><a href="#" routerLink="/" routerLinkActive="active" 
-          [routerLinkActiveOptions]="{exact: true}">HOME</a></li>
+          [routerLinkActiveOptions]="{exact: true}" (click)="CloseVertNav()">HOME</a></li>
         <li><a href="#" routerLink="/about" routerLinkActive="active" 
-          [routerLinkActiveOptions]="{exact: true}">ABOUT</a></li>
+          [routerLinkActiveOptions]="{exact: true}" (click)="CloseVertNav()">ABOUT</a></li>
         <li><a href="#" routerLink="/work" routerLinkActive="active" 
-          [routerLinkActiveOptions]="{exact: true}">WORK</a></li>
+          [routerLinkActiveOptions]="{exact: true}" (click)="CloseVertNav()">WORK</a></li>
         <li><a href="#" routerLink="/contact" routerLinkActive="active" 
-          [routerLinkActiveOptions]="{exact: true}">CONTACT</a></li>
+          [routerLinkActiveOptions]="{exact: true}" (click)="CloseVertNav()">CONTACT</a></li>
       </ul>
     </nav>
+    
   </div>
 </header>
 

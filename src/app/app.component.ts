@@ -8,4 +8,18 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'myportfolio';
+
+  OpenVertNav() {
+    var x = document.getElementById("idNav");
+    if (x.className === "nav") {
+      x.className += " responsive";
+    } else {
+      x.className = "nav";
+    }
+  }
+
+  CloseVertNav() {
+    document.getElementById("idNav").className = "nav";
+  }
+
 }
