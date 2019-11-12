@@ -6,7 +6,6 @@ $primary: rgb(24, 26, 24);
 $secundary: rgb(36, 36, 36);
 $thirdy: rgb(16, 19, 17);
 
-
 $accent: rgb(0, 255, 51);
 $accentGlow: 0 0 7px rgb(0, 0, 0), 0 0 7px $accent;;
 $accentDark: rgb(54, 92, 54);
@@ -47,10 +46,7 @@ header {
     background-size: contain;
     width: 5rem;
     height: 5rem;  
-
-    &:hover {
-        background-image: url(../src/assets/images/logo5.png);
-    }
+    //&:hover { background-image: url(../src/assets/images/logo5.png); }
 }
 
 .icon {
@@ -166,8 +162,5 @@ footer {
                 li { height: 6rem; }
             }
         }
-    }
-
-    
-    
+    } 
 }
