@@ -2,15 +2,25 @@
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
-$primary: rgb(1, 2, 0); //rgb(26, 27, 26);
-$secundary: rgb(9, 36, 7); //rgb(36, 37, 36);
-$thirdy: rgb(5, 29, 28);
+:root { // global CSS var's
 
-$accent: rgb(0, 255, 149); //rgb(43, 255, 0)
-$accentGlow: 0 0 7px rgb(0, 0, 0), 0 0 7px $accent;
-$accentDark: rgb(0, 126, 73);//rgb(0, 70, 70);//rgb(54, 92, 54);
-$accentDarker: rgb(0, 58, 34);//rgb(0, 43, 43);
+    // COLORS
+    --c1: rgb(20, 26, 24); //rgb(26, 27, 26);
+    --c2: rgb(7, 36, 25); //rgb(36, 37, 36);
+    --c3: rgb(5, 29, 28);
+
+    --accent: rgb(130, 248, 219); //rgb(43, 255, 0)
+    --accentG: 0 0 7px rgb(0, 0, 0), 0 0 7px var(--accent); //glow
+    --accentS: rgb(87, 172, 146);//rgb(0, 70, 70);//rgb(54, 92, 54); //shade
+    --accentD: rgb(24, 49, 40);//rgb(0, 43, 43); //dark
+
+    // FONTS
+    --fNunito: 'Nunito', 'sans-serif';
+    --fTech: 'Share Tech Mono', monospace;
+    --fRubik: 'Rubik', sans-serif;
+}
 
 $hx: 5rem; //header height
 $fx: 7rem; //footer height
@@ -25,8 +35,8 @@ html {
 // HEADER 
 
 header {
-    //background-image: linear-gradient($primary, $secundary, $primary);
-    background-color: $primary;
+    //background-image: linear-gradient(var(--c1), var(--c2), var(--c1));
+    background-color: var(--c1);
     width: 100%;
     height: $hx;
     top: 0;
@@ -42,7 +52,7 @@ header {
 }
 
 .logo {  
-    background-image: url(../src/assets/images/logo7.png);
+    background-image: url(../src/assets/images/logo9.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -51,13 +61,13 @@ header {
     margin-left: 0.5rem;
 
     &:hover {
-        // display 'Wannes Dieltiens' instead of logo
+        // display 'Wannes Dieltiens' instead of logo?
     }
 }
 .icon {
     display: none;
     height: $hx;
-    color: $accent; 
+    color: var(--accent); 
     font-size: 1.7rem;
 }
 
@@ -79,20 +89,24 @@ nav {
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: $accentDark;
-            font-family: 'Share Tech Mono', monospace;
+            color: var(--accentD);
+            font-family: var(--fTech);
             font-size: 1.3rem;
 
-            &.active {
-                color: $accent;
-                text-shadow: 0 0 7px rgb(0, 0, 0), 0 0 7px $accent;
+            &:hover {
+                color: var(--accent);
+                
+                box-shadow: inset 0 0 1rem 0.3rem rgb(10, 12, 10, 0.7);
             }
 
-            &:hover {
-                    color: $accent;
-                    text-shadow: $accentGlow;
-                    //box-shadow: inset 0 0 1rem 0.5rem rgb(20, 24, 20);
+            &.active {
+                color: var(--accent);
+                //text-shadow: $accentG;
+                //box-shadow: inset 0 0 1rem 0.3rem rgba(33, 212, 102, 0.3); // maybe
+                //text-shadow: 0 0 7px rgb(0, 0, 0), 0 0 7px $accent;
             }
+
+            
         }
     }
 }
@@ -100,15 +114,15 @@ nav {
 // BODY
 
 body {
-    background-image: linear-gradient(to bottom, $primary , $accentDarker 500px, $accent 95%);
+    background-image: linear-gradient(to bottom, var(--c1) -5%, var(--accentD) 60%, var(--accentS) 120%);
     //background-image: linear-gradient(-45deg, rgb(24, 24, 24), rgb(46, 46, 46));
-    //background-color: $accentDarker;
+   // background-color: $accentD;
     margin: 0;
-    font-family: 'Nunito', 'sans-serif'; //should find better font
+    font-family: var(--fNunito); //should find better font
 
     .content {
-        //background-image: linear-gradient(to top, $primary,rgba(22, 22, 22, 0.24));
-        color:rgb(181, 255, 194);
+        //background-image: linear-gradient(to top, var(--c1),rgba(22, 22, 22, 0.24));
+        color: var(--accentS);
         margin: 1rem auto; // TEMP !!!!
         width: 95%; 
     }
@@ -117,14 +131,14 @@ body {
 // FOOTER
 
 footer {
-    //background-image: linear-gradient($thirdy -30%, $secundary 13%, $primary);
-    background-color: $primary;
-    color: $accent;
+    //background-image: linear-gradient(var(--c3) -30%, var(--c2) 13%, var(--c1));
+    background-color: var(--c1);
+    color: var(--accent);
     height: $fx;
     width: 100%;
     position: absolute;
     bottom: 0;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: var(--fTech);
 }
 
 @media screen and (max-width:680px) {
@@ -146,7 +160,7 @@ footer {
 
                 li { 
                     height: $hx;
-                    background-color: $primary;
+                    background-color: var(--c1);
                     &:first-child { background-color: none }
                 }
             }
