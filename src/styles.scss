@@ -3,23 +3,38 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alatsi&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
+
 
 :root { // global CSS var's
 
     // COLORS
-    --c1: rgb(20, 26, 24); //rgb(26, 27, 26);
-    --c2: rgb(7, 36, 25); //rgb(36, 37, 36);
-    --c3: rgb(5, 29, 28);
+    --c1: rgb(18, 22, 21); //rgb(26, 27, 26);
+    --c2: rgb(25, 32, 30);//rgb(7, 36, 25); //rgb(36, 37, 36);
+    //--red: #CC0033; //rgb(187, 20, 75);//rgb(5, 29, 28);
+    --accentL:#66FFCC;// #FF9933;
+    --accent: #33FF99;
+    //--accent: #33FFFF;
+    --accentSL: #33CC99;
+    --accentS: #339966;
+     // rename base?
 
-    --accent: rgb(130, 248, 219); //rgb(43, 255, 0)
+    //--accent: cyan;//rgb(122, 231, 198) ;//rgb(102, 204, 153); //rgb(43, 255, 0)
     --accentG: 0 0 7px rgb(0, 0, 0), 0 0 7px var(--accent); //glow
-    --accentS: rgb(87, 172, 146);//rgb(0, 70, 70);//rgb(54, 92, 54); //shade
-    --accentD: rgb(24, 49, 40);//rgb(0, 43, 43); //dark
+    //--accentS: #339999;//rgb(94, 150, 140);//rgb(0, 70, 70);//rgb(54, 92, 54); //shade
+    --accentSD:  rgb(41, 87, 68);
+    --accentD: rgb(20, 41, 33);//rgb(0, 43, 43); //dark
 
     // FONTS
     --fNunito: 'Nunito', 'sans-serif';
     --fTech: 'Share Tech Mono', monospace;
     --fRubik: 'Rubik', sans-serif;
+    --fQuick: 'Quicksand', sans-serif;
+    --fAlatsi: 'Alatsi', sans-serif;
+    --fBebas: 'Bebas Neue', cursive;
 }
 
 $hx: 5rem; //header height
@@ -40,6 +55,7 @@ header {
     width: 100%;
     height: $hx;
     top: 0;
+    position: absolute;
 
     a {
         display: inline-block;
@@ -52,7 +68,7 @@ header {
 }
 
 .logo {  
-    background-image: url(../src/assets/images/logo9.png);
+    background-image: url(../src/assets/images/logo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -61,7 +77,9 @@ header {
     margin-left: 0.5rem;
 
     &:hover {
+        //background-image: url(../src/assets/images/logo11.png);
         // display 'Wannes Dieltiens' instead of logo?
+        // else add a preloader
     }
 }
 .icon {
@@ -89,19 +107,19 @@ nav {
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: var(--accentD);
+            color: var(--accentSD);
             font-family: var(--fTech);
             font-size: 1.3rem;
 
             &:hover {
-                color: var(--accent);
+                color: var(--accentSL);
                 
                 box-shadow: inset 0 0 1rem 0.3rem rgb(10, 12, 10, 0.7);
             }
 
             &.active {
-                color: var(--accent);
-                //text-shadow: $accentG;
+                color: var(--accentL);
+                //text-shadow: var(--accentG);
                 //box-shadow: inset 0 0 1rem 0.3rem rgba(33, 212, 102, 0.3); // maybe
                 //text-shadow: 0 0 7px rgb(0, 0, 0), 0 0 7px $accent;
             }
@@ -114,9 +132,9 @@ nav {
 // BODY
 
 body {
-    background-image: linear-gradient(to bottom, var(--c1) -5%, var(--accentD) 60%, var(--accentS) 120%);
+    //background-image: linear-gradient(to bottom, var(--c1) -5%, var(--accentD) 50%, var(--accentSD));
     //background-image: linear-gradient(-45deg, rgb(24, 24, 24), rgb(46, 46, 46));
-   // background-color: $accentD;
+    background-color: var(--c2);
     margin: 0;
     font-family: var(--fNunito); //should find better font
 
@@ -124,7 +142,9 @@ body {
         //background-image: linear-gradient(to top, var(--c1),rgba(22, 22, 22, 0.24));
         color: var(--accentS);
         margin: 1rem auto; // TEMP !!!!
+        margin-top: $hx + 1;
         width: 95%; 
+        min-height: 75vh;
     }
 }
 
@@ -137,7 +157,7 @@ footer {
     height: $fx;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    margin-bottom: 0;
     font-family: var(--fTech);
 }
 
@@ -156,7 +176,7 @@ footer {
             &.responsive { //vert nav pops up when pressed menu btn
                 position: relative;  
                 a.icon { position: absolute } 
-                ul, li { display: block }
+                ul, li { display: block;}
 
                 li { 
                     height: $hx;

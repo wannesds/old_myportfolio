@@ -1,3 +1,65 @@
-#aboutContainer {
-    height: 70rem;
+.test {
+    background-color: var(--c1);
+    width: 75%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    height: auto; // could be auto?
+    display: flex;
+
+    p {
+        width: 50%; // make Intro text and wannes img fit container, maybe 
+        min-height: 10rem;   
+        //background-color:rgba(255, 255, 0, 0.144);
+        text-align: justify;
+        margin: 1rem;
+    }
+}
+
+
+#imgWannes {
+    height: 220px;
+    width: 180px;
+    //max-width: 180px;
+   // min-width: 180px;
+    background-color: var(--accent);
+    background-image: url();
+    margin: 1rem auto;
+}
+
+#aboutIntro {
+    p {
+    
+    }
+}
+
+#aboutMain {
+
+}
+
+#aboutImgs {  
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.img {
+    height: 200px;
+    width: 200px;
+    margin: 0.5rem;
+    background-color: var(--accent);
+}
+
+@media screen and (max-width: 680px) {
+    .test {
+        height: auto; // could be auto
+        width: 90%;
+
+        p {
+            
+         
+        }
+    }
+
+    #aboutImgs .img {
+        
+    }
 }

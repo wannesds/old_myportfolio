@@ -1,3 +1,18 @@
+Portfolio site to start off ICT carreer
+
+TO DO (find a job!!!!) :
+- make readme better
+- opening nav menu in mobile view pushes content under
+- optimize css (+ initialize h1,p,... globaly in main styles)
+- about page
+- contact page
+- work page
+- footer
+- home animation
+- use JS to animate highlighted words on hover (home.comp > span)
+
+
+
 # Myportfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.

@@ -1,39 +1,74 @@
-.test {
+h1 {
+    text-align: center;
+    color: var(--accentS);
+
+    //color: darken(var(--accent), 10%);
+    font-family: var(--fQuick);
+}
+
+span {
+    color: var(--accent);
+    
+    &:hover {
+        //color: var(--accent);
+        //cursor: default;
+        //add animation
+    }
+}
+
+h2 { //lolz
+    text-align: center;
+    font-family: var(--fQuick);
+    font-size: 30px;
+}
+
+/* .test {
+    background-color: var(--c1);
+    width: 100vw; // needs to be 100vw for tablecell to work, ugh temp
+    margin: 1rem auto;
+    height: 55vh;
+    display: table-cell; // to center lolz
+    vertical-align: middle;
+} */
+
+canvas {
     background-color: var(--c1);
     width: 100%;
-    margin: auto;
-    height: 55vh;
+    height: 50vh;
 }
 
 #boxContainer {
     //background-color: rgba(44, 153, 255, 0.514);
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     display: flex;
-    margin-bottom: 8rem; // footerheight + 1
-    margin-top: 1rem;
+    justify-content: center;
+    margin: 2rem auto;
 }
 
 .box {
-    // back-image could be global :root variable for re-usage
-    //background-image: linear-gradient(to top, rgba(3, 37, 37, 0.5), rgba(8, 127, 151, 0.5));
-    background-image: linear-gradient(-170deg, rgba(0, 0, 0, 0.253) 0% , rgba(10, 14, 12, 0.788) 60%);
-   // background-image: linear-gradient(to top, rgba(0, 0, 0, 0.048) 0% , rgba(0, 0, 0, 0.61) 60%);
-    width: 25%;
+   
+    width: 20rem;
     height: auto; //could be 'auto'
-    margin: 0 auto;
-    box-shadow: 0 0.7em 0.8rem 0.1rem rgba(0, 0, 0, 0.5);
-    font-family: var(--fRubik);
-    font-size: 17px;
+    margin: auto 1rem;
+    margin-top: 0; 
+    box-shadow: 0 0.7em 0.8rem 0.1rem rgba(8, 8, 8, 0.5);
+     // back-image could be global :root variable for re-usage
+    //background-image: linear-gradient(to top, rgba(3, 37, 37, 0.5), rgba(8, 127, 151, 0.5));
+    //background-image: linear-gradient(-170deg, rgb(30, 39, 36) 0% , rgb(19, 27, 23) 60%);
+    background-color: var(--c1);
+   
 
     p {
         margin: 1rem auto;
         height: auto;
         width: 80%;
-        //text-align: justify;
-        font-stretch: ultra-expanded;
-        color: rgb(63, 126, 105);
+        text-align: justify;
+        //font-stretch: ultra-expanded;
+        color: var(--accentS);
         display:block;
+        font-family: var(--fNunito);
+        font-size: 17px;
         //background-color: rgba(255, 0, 0, 0.281);
     }
 }
@@ -45,20 +80,20 @@
     height: 1.25rem; 
     display: block;
     border-style: solid;
-    border-width: 1px;
+    border-width: 0.5px;
     background-color: var(--accentD);
-    border-color: var(--accentS);
-    color: var(--accentS);
+    border-color: var(--accentSL);
+    color: var(--accentSL);
     text-decoration-line: none;
     text-align: center;
     font-size: 17px;
     font-family:var(--fNunito);
     
-    &:hover {  
-        background-color:rgb(32, 59, 59);
+    &:hover {  //optimize color switch 
+        border-style: solid;     
         border-color:var(--accent);
-        color: var(--accent);
-
+        color: var(--accent); 
+        box-shadow: inset 0 0 5px 3px rgba(7, 7, 7, 0.4);
     }
 }
 
@@ -75,10 +110,20 @@
         width: 90%;
         height: auto;
         padding: 0.25rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
 
         p {
-            width: 90%
+            width: 90%;
+            margin: 0.5rem;
         }
+    }
+
+    h1 {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .boxLink {
+        margin: 0.5rem auto;
     }
 }
