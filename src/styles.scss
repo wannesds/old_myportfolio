@@ -164,14 +164,19 @@ footer {
 @media screen and (max-width:680px) {
 
     // HEADER
-
     header {
-        .icon { display: flex }
+        
+        .icon { display: flex;  height: $hx - 0.5rem; }
         .container { width: auto }
-        .logo { margin-left: 1rem }
+        .logo { 
+            margin-left: 1rem;
+            height: $hx - 1.5rem;
+            width: $hx - 1.5rem;
+        }
+        height: $hx - 0.5rem;
         
         nav { //creates vert nav and show only menu btn
-            li:not(:first-child) { display: none }
+            li:not(:first-child) { display: none}
 
             &.responsive { //vert nav pops up when pressed menu btn
                 position: relative;  
@@ -179,7 +184,7 @@ footer {
                 ul, li { display: block;}
 
                 li { 
-                    height: $hx;
+                    height: $hx - 0.5rem;
                     background-color: var(--c1);
                     &:first-child { background-color: none }
                 }
@@ -191,6 +196,7 @@ footer {
 
     body .content { 
         width: 95%;
+        margin-top: $hx + 0.5rem;
     }
 
 }

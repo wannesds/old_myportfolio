@@ -1,18 +1,10 @@
-.test {
+.container {
     background-color: var(--c1);
     width: 75%;
     margin: 1rem auto;
     padding: 1.5rem;
     height: auto; // could be auto?
     display: flex;
-
-    p {
-        width: 50%; // make Intro text and wannes img fit container, maybe 
-        min-height: 10rem;   
-        //background-color:rgba(255, 255, 0, 0.144);
-        text-align: justify;
-        margin: 1rem;
-    }
 }
 
 
@@ -28,7 +20,12 @@
 
 #aboutIntro {
     p {
-    
+        font-size: 17px;
+        width: 50%; // make Intro text and wannes img fit container, maybe 
+        min-height: 10rem;   
+        //background-color:rgba(255, 255, 0, 0.144);
+        text-align: center;
+        margin: 1rem;
     }
 }
 
@@ -36,30 +33,75 @@
 
 }
 
-#aboutImgs {  
+#aboutMain {  
     justify-content: center;
     flex-wrap: wrap;
+    width: auto;
+
+    .box p {
+        text-align: center;
+        width: 90%;
+        height: 60%;
+        margin: auto;
+        //display: block;
+        color: var(--accent);
+        font-weight: bolder;
+        //background-color: var(--c1); //temp
+    }
 }
 
-.img {
-    height: 200px;
-    width: 200px;
+.box {
+    height: 290px;
+    width: 290px;
     margin: 0.5rem;
-    background-color: var(--accent);
+    padding: auto;
+    background-color: var(--c1);
+
+    img {
+        height: 40px;
+        width: 70%;
+        background-color: var(--accent);
+        margin: auto;
+        display: block;
+    }
+}
+
+h3 {
+    margin: 0.5rem auto;
+    text-align: center;
+    width: 70%;
+    color: var(--accent);
+    border-bottom-style: solid;
+    border-color: var(--accent);
 }
 
 @media screen and (max-width: 680px) {
-    .test {
+
+    .container {
         height: auto; // could be auto
         width: 90%;
+        padding: 0.5rem;
+        margin: 1rem 0rem;
 
+        
+    }
+
+    #aboutIntro {
+        width: auto;
         p {
-            
-         
+            font-size: 16px;
         }
     }
 
-    #aboutImgs .img {
-        
+    #aboutMain {
+        p {
+            font-size: 15px;
+        }
+        .box {
+            height: 250px;
+            width: 250px;
+        }
     }
+
+    
 }
