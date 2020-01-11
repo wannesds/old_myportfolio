@@ -1,14 +1,44 @@
 // DECLARATIONS
+
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alatsi&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 
-$primary: rgb(24, 26, 24);
-$secundary: rgb(36, 36, 36);
-$thirdy: rgb(16, 19, 17);
 
-$accent: rgb(0, 255, 51);
-$accentGlow: 0 0 7px rgb(0, 0, 0), 0 0 7px $accent;;
-$accentDark: rgb(54, 92, 54);
+
+:root { // global CSS var's
+
+    // COLORS
+    --c1: rgb(18, 22, 21); //rgb(26, 27, 26);
+    --c2: rgb(25, 32, 30);//rgb(7, 36, 25); //rgb(36, 37, 36);
+    //--red: #CC0033; //rgb(187, 20, 75);//rgb(5, 29, 28);
+    --accentL:#66FFCC;// #FF9933;
+    --accent: #33FF99;
+    //--accent: #33FFFF;
+    --accentSL: #33CC99;
+    --accentS: #339966;
+     // rename base?
+
+    //--accent: cyan;//rgb(122, 231, 198) ;//rgb(102, 204, 153); //rgb(43, 255, 0)
+    --accentG: 0 0 7px rgb(0, 0, 0), 0 0 7px var(--accent); //glow
+    //--accentS: #339999;//rgb(94, 150, 140);//rgb(0, 70, 70);//rgb(54, 92, 54); //shade
+    --accentSD:  rgb(41, 87, 68);
+    --accentD: rgb(20, 41, 33);//rgb(0, 43, 43); //dark
+
+    // FONTS
+    --fNunito: 'Nunito', 'sans-serif';
+    --fTech: 'Share Tech Mono', monospace;
+    --fRubik: 'Rubik', sans-serif;
+    --fQuick: 'Quicksand', sans-serif;
+    --fAlatsi: 'Alatsi', sans-serif;
+    --fBebas: 'Bebas Neue', cursive;
+}
+
+$hx: 5rem; //header height
+$fx: 7rem; //footer height
 
 // GENERAL
 
@@ -17,42 +47,45 @@ html {
     min-height: 100%;
 }
 
-.container { /*tweak this */
-    width: 90%;
-    margin: 0 auto;
-}
-
-
-
 // HEADER 
 
 header {
-    background-image: linear-gradient($primary, $secundary, $primary);
+    //background-image: linear-gradient(var(--c1), var(--c2), var(--c1));
+    background-color: var(--c1);
     width: 100%;
-    height: 6rem;
-    position: fixed;
+    height: $hx;
     top: 0;
+    position: absolute;
 
     a {
         display: inline-block;
         padding: 0.5rem 0;
     }
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
 }
 
-.logo{  
-    background-image: url(../src/assets/images/logoAccent.png);
+.logo {  
+    background-image: url(../src/assets/images/logo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    width: 5rem;
-    height: 5rem;  
-    //&:hover { background-image: url(../src/assets/images/logo5.png); }
-}
+    width: $hx - 1rem;
+    height: $hx - 1rem;
+    margin-left: 0.5rem;
 
+    &:hover {
+        //background-image: url(../src/assets/images/logo11.png);
+        // display 'Wannes Dieltiens' instead of logo?
+        // else add a preloader
+    }
+}
 .icon {
     display: none;
-    height: 6rem;
-    color: $accent; 
+    height: $hx;
+    color: var(--accent); 
     font-size: 1.7rem;
 }
 
@@ -63,42 +96,35 @@ nav {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        display: flex;     
+        display: flex;    
 
         li a {
             width: 6rem;
-            height: 6rem;
-            padding: 0 0.5rem;
+            height: $hx;
+            padding: 0;
+            margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: $accentDark;
-            font-family: 'Share Tech Mono', monospace;
+            color: var(--accentSD);
+            font-family: var(--fTech);
             font-size: 1.3rem;
 
-            &.active {
-                color: $accent;
-                text-shadow: 0 0 7px rgb(0, 0, 0), 0 0 7px $accent;
-                //box-shadow: inset 0 0 1rem 0.1rem (rgba(0, 255, 42, 0.54));
-                /*background-image: linear-gradient(rgba(26, 29, 26, 1),
-                                                rgba(47, 58, 49, 0.8),
-                                                rgba(26, 29, 26, 1) );*/
-                //background-image:radial-gradient(rgb(49, 82, 55), rgba(26, 29, 26, 0) 60%);
-                /*background-image:radial-gradient(rgba(0, 0, 0, 0) 50%, $accent, rgba(0, 0, 0, 0) 60%);
-                &:hover {
-                    background-image:radial-gradient($secundary 20%, rgba(30,30,30) 50%, $accent 57%, rgba(30,30,30) 58%, $thirdy 95%);
-                }*/
+            &:hover {
+                color: var(--accentSL);
+                
+                box-shadow: inset 0 0 1rem 0.3rem rgb(10, 12, 10, 0.7);
             }
 
-            &:hover {
-                    color: $accent;
-                    text-shadow: $accentGlow;
-                    box-shadow: inset 0 0 1rem 0.5rem rgb(20, 24, 20);
-                    //background-image: linear-gradient($thirdy, $secundary, $thirdy );
-                    //background-image:radial-gradient($secundary, $thirdy 90%);
-                    //background-image:radial-gradient(rgb(19, 19, 19), rgba(26, 29, 26, 0) 60%);
+            &.active {
+                color: var(--accentL);
+                //text-shadow: var(--accentG);
+                //box-shadow: inset 0 0 1rem 0.3rem rgba(33, 212, 102, 0.3); // maybe
+                //text-shadow: 0 0 7px rgb(0, 0, 0), 0 0 7px $accent;
             }
+
+            
         }
     }
 }
@@ -106,61 +132,71 @@ nav {
 // BODY
 
 body {
-    
-    background-image: linear-gradient($thirdy 11%, $secundary 13%, $primary);
-    /*temporary*/
+    //background-image: linear-gradient(to bottom, var(--c1) -5%, var(--accentD) 50%, var(--accentSD));
+    //background-image: linear-gradient(-45deg, rgb(24, 24, 24), rgb(46, 46, 46));
+    background-color: var(--c2);
     margin: 0;
-    font-family: 'Nunito', 'sans-serif'; /*should find better font*/
+    font-family: var(--fNunito); //should find better font
 
     .content {
-        background-color: $secundary;
-        color:rgb(181, 255, 194);
-        padding: 0.5rem;
-        margin: 1rem;
+        //background-image: linear-gradient(to top, var(--c1),rgba(22, 22, 22, 0.24));
+        color: var(--accentS);
+        margin: 1rem auto; // TEMP !!!!
+        margin-top: $hx + 1;
+        width: 95%; 
+        min-height: 75vh;
     }
 }
 
 // FOOTER
 
 footer {
-    /* background-image: linear-gradient($secundary, 
-                                    rgb(32, 49, 34) 25%,
-                                    rgb(32, 49, 34) 75%, 
-                                    $primary); */
-    /*background-image:linear-gradient(rgb(43, 43, 43) ,
-                                    rgb(102, 102, 102) 5%, 
-                                    rgb(56, 56, 56) );*/
-                                    
-    background-image: linear-gradient($thirdy -30%, $secundary 13%, $primary);
-    color: $accent;
-    height: 7rem;
+    //background-image: linear-gradient(var(--c3) -30%, var(--c2) 13%, var(--c1));
+    background-color: var(--c1);
+    color: var(--accent);
+    height: $fx;
     width: 100%;
     position: absolute;
-    bottom: 0;
-    font-family: 'Share Tech Mono', monospace;
+    margin-bottom: 0;
+    font-family: var(--fTech);
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:680px) {
 
     // HEADER
-
     header {
-        .container {width: 100%}
-        .logo {margin-left: 2rem;}
-        .icon {display: flex;}
-
+        
+        .icon { display: flex;  height: $hx - 0.5rem; }
+        .container { width: auto }
+        .logo { 
+            margin-left: 1rem;
+            height: $hx - 1.5rem;
+            width: $hx - 1.5rem;
+        }
+        height: $hx - 0.5rem;
+        
         nav { //creates vert nav and show only menu btn
-            li:not(:first-child) {
-                display: none;
-            }
+            li:not(:first-child) { display: none}
 
             &.responsive { //vert nav pops up when pressed menu btn
-                position: relative;
-                background-color:rgb(24, 24, 24);
-                a.icon { position: absolute; } 
-                ul, li {display: block;}
-                li { height: 6rem; }
+                position: relative;  
+                a.icon { position: absolute } 
+                ul, li { display: block;}
+
+                li { 
+                    height: $hx - 0.5rem;
+                    background-color: var(--c1);
+                    &:first-child { background-color: none }
+                }
             }
         }
-    } 
+    }
+
+    // BODY
+
+    body .content { 
+        width: 95%;
+        margin-top: $hx + 0.5rem;
+    }
+
 }

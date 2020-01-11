@@ -1,0 +1,107 @@
+.container {
+    background-color: var(--c1);
+    width: 75%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    height: auto; // could be auto?
+    display: flex;
+}
+
+
+#imgWannes {
+    height: 220px;
+    width: 180px;
+    //max-width: 180px;
+   // min-width: 180px;
+    background-color: var(--accent);
+    background-image: url();
+    margin: 1rem auto;
+}
+
+#aboutIntro {
+    p {
+        font-size: 17px;
+        width: 50%; // make Intro text and wannes img fit container, maybe 
+        min-height: 10rem;   
+        //background-color:rgba(255, 255, 0, 0.144);
+        text-align: center;
+        margin: 1rem;
+    }
+}
+
+#aboutMain {
+
+}
+
+#aboutMain {  
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+
+    .box p {
+        text-align: center;
+        width: 90%;
+        height: 60%;
+        margin: auto;
+        //display: block;
+        color: var(--accent);
+        font-weight: bolder;
+        //background-color: var(--c1); //temp
+    }
+}
+
+.box {
+    height: 290px;
+    width: 290px;
+    margin: 0.5rem;
+    padding: auto;
+    background-color: var(--c1);
+
+    img {
+        height: 40px;
+        width: 70%;
+        background-color: var(--accent);
+        margin: auto;
+        display: block;
+    }
+}
+
+h3 {
+    margin: 0.5rem auto;
+    text-align: center;
+    width: 70%;
+    color: var(--accent);
+    border-bottom-style: solid;
+    border-color: var(--accent);
+}
+
+@media screen and (max-width: 680px) {
+
+    .container {
+        height: auto; // could be auto
+        width: 90%;
+        padding: 0.5rem;
+        margin: 1rem 0rem;
+
+        
+    }
+
+    #aboutIntro {
+        width: auto;
+        p {
+            font-size: 16px;
+        }
+    }
+
+    #aboutMain {
+        p {
+            font-size: 15px;
+        }
+        .box {
+            height: 250px;
+            width: 250px;
+        }
+    }
+
+    
+}
