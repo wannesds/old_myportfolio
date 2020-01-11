@@ -2,8 +2,7 @@ Portfolio site to start off ICT carreer
 
 TO DO (find a job!!!!) :
 - make readme better
-- opening nav menu in mobile view pushes content under
-- optimize css (+ initialize h1,p,... globaly in main styles)
+- optimize and clean css (+ initialize h1,p,... globaly in main styles)
 - about page
 - contact page
 - work page
