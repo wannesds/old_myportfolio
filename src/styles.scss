@@ -13,21 +13,21 @@
 
     // COLORS
     --c1: rgb(18, 22, 21); //rgb(26, 27, 26);
-    --c2: rgb(25, 32, 30);//rgb(7, 36, 25); //rgb(36, 37, 36);
-    --c3: rgb(30, 46, 37);
+    --c2: #19201e;//rgb(7, 36, 25); //rgb(36, 37, 36);
+    --c3: #161D1B;//00331A;//rgb(30, 46, 37);
+    --c4: #0b0e0d;
     //--red: #CC0033; //rgb(187, 20, 75);//rgb(5, 29, 28);
     --accentL: #66FFCC;// #FF9933;
-    --accent: #33FF99;
-    //--accent: #33FFFF;
-    --accentSL: #33CC99;
-    --accentS: #339966;
-     // rename base?
+    --accent: #00FF80; //33FF99
+    --accentSL: #00CC66;//#33CC99;
+    --accentS: #00994D;//339966;
+    --accentSD:  rgb(41, 87, 68);
+    --accentD: rgb(20, 41, 33);//rgb(0, 43, 43); //dark // rename base?
 
     //--accent: cyan;//rgb(122, 231, 198) ;//rgb(102, 204, 153); //rgb(43, 255, 0)
     --accentG: 0 0 7px rgb(0, 0, 0), 0 0 7px var(--accent); //glow
     //--accentS: #339999;//rgb(94, 150, 140);//rgb(0, 70, 70);//rgb(54, 92, 54); //shade
-    --accentSD:  rgb(41, 87, 68);
-    --accentD: rgb(20, 41, 33);//rgb(0, 43, 43); //dark
+ 
 
     // FONTS
     --fNunito: 'Nunito', 'sans-serif';
