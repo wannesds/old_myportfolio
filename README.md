@@ -1,14 +1,24 @@
-Portfolio site to start off ICT carreer
+Portfolio site to start off ICT carreer and relearn web dev
 
 TO DO (find a job!!!!) :
 - make readme better
 - optimize and clean css (+ initialize h1,p,... globaly in main styles)
+- Optimize colors!
 - about page
 - contact page
 - work page
 - footer
 - home animation
 - use JS to animate highlighted words on hover (home.comp > span)
+- add animation in logo when hover to show full name ('>' moves right)
+- add global color 'wheel' under logo as a small easter egg OR add somewhere on home as show-off
+- lookup and add correct Copyrights
+- digitalize some drawings and add subtle on background
+- MAYBE redo logo for something smoother
+- make/find a good profile pic
+- design about>box border and specific banner for each
+- 
+
 
 
 
