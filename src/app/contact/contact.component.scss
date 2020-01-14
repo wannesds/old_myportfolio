@@ -1,0 +1,40 @@
+.container {
+    height: auto;
+    margin: auto;
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+    color: var(--accentS)
+}
+
+h1 span {
+    color: var(--accent);
+}
+
+#socialMedia {
+    display: flex;
+    justify-content: center;
+
+    a {
+        background-color: var(--accentSD);//temp
+        width: 50px;
+        height: 50px;
+        margin: 0.5rem 1rem;
+        display: block;
+    }
+}
+
+#mailForm {
+    height: 50rem; //temp
+    margin-top: 1rem;   
+    background-color: var(--c1);
+}
+
+@media screen and (max-width: 680px) {
+
+    .container {
+        width: 100%;
+    }
+}

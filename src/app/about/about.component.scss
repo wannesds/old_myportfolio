@@ -21,7 +21,7 @@
     margin-top: 1rem;
     justify-content: center;
     width: 37.25rem;
-    //color: var(--accentS); //-> is alrdy in styles globally declared it seems
+    color: var(--accentS);
     
 
     p {
@@ -36,6 +36,7 @@
 
     p span {
         font-style: oblique;
+        color: var(--accentS);
     }
 }
 
