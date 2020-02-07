@@ -2,6 +2,9 @@
     height: auto;
     margin: auto;
     width: 80%;
+    margin: 1rem auto;
+    display:flex;
+    justify-content: center;
 }
 
 h1 {
@@ -13,23 +16,48 @@ h1 span {
     color: var(--accent);
 }
 
-#socialMedia {
-    display: flex;
-    justify-content: center;
-
-    a {
-        background-color: var(--accentSD);//temp
-        width: 50px;
-        height: 50px;
-        margin: 0.5rem 1rem;
-        display: block;
-    }
+#socialMedia a {
+    background-color: var(--accentSD);//temp
+    width: 50px;
+    height: 50px;
+    margin: 0.5rem 1rem;
 }
 
-#mailForm {
-    height: 50rem; //temp
-    margin-top: 1rem;   
-    background-color: var(--c1);
+
+form { 
+    background-color: var(--c2);
+    width: 35rem;
+}
+
+.form-group {
+    margin: 1rem;
+    display:flex;
+    justify-content: center;   
+}
+
+input[type=text] ,#message, .btn {
+    width: 15rem;
+    background-color:var(--accentSD);
+    border-color: var(--accentSL);
+    padding: 0.2rem;
+}
+
+#message {
+    width: 20rem;
+    height: 10rem;
+}
+
+
+
+.btn {
+    margin:auto;
+    display:block;
+    margin-bottom: 1rem;
+    width: 6rem;
+    height: 2rem;
+    color: var(--accentSL);
+    font-family: var(--fNunito);
+    font-weight: bold;
 }
 
 @media screen and (max-width: 680px) {
@@ -37,4 +65,10 @@ h1 span {
     .container {
         width: 100%;
     }
+
+    form {
+        width: 100%;
+    }
+
 }
+

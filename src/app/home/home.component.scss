@@ -33,8 +33,10 @@ h2 { //lolz
 
 canvas {
     background-color: var(--c1);
-    width: 100%;
+    width: 90%;
     height: 50vh;
+    display: flex;
+    margin: auto;
 }
 
 #boxContainer {
