@@ -12,13 +12,14 @@
 :root { // global CSS var's
 
     // COLORS
-    --c1: rgb(18, 22, 21); //rgb(26, 27, 26);
+    --c1: #121615;//rgb(18, 22, 21); //rgb(26, 27, 26);
     --c2: #19201e;//rgb(7, 36, 25); //rgb(36, 37, 36);
-    --c3: #161D1B;//00331A;//rgb(30, 46, 37);
-    --c4: #0b0e0d;
+    --c3: rgb(18, 24, 22);//00331A;//rgb(30, 46, 37);
+    --c4: #1d2c25;
+    --c5: #242e2b;
     //--red: #CC0033; //rgb(187, 20, 75);//rgb(5, 29, 28);
     --accentL: #66FFCC;// #FF9933;
-    --accent: #00FF80; //33FF99
+    --accent: rgb(38, 218, 128); //33FF99
     --accentSL: #00CC66;//#33CC99;
     --accentS: rgb(48, 134, 91);//339966;
     --accentSD:  rgb(26, 73, 54);
@@ -69,13 +70,14 @@ header {
 }
 
 .logo {  
-    background-image: url(../src/assets/images/logo.png);
+    background-image: url(../src/assets/images/logoInvert.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    width: $hx - 1rem;
-    height: $hx - 1rem;
-    margin-left: 0.5rem;
+    background-size: cover;
+    background-color: var(--accent);
+    width: $hx - 0.5rem;
+    height: $hx - 2rem;
+    margin: 0.5rem;
 
     &:hover {
         //background-image: url(../src/assets/images/logo11.png);
@@ -112,18 +114,20 @@ nav {
             font-family: var(--fTech);
             font-size: 1.3rem;
 
-            &:hover {
-                color: var(--accentSL);
-                
-                box-shadow: inset 0 0 1rem 0.3rem rgb(10, 12, 10, 0.7);
-            }
-
             &.active {
                 color: var(--accent);
+                background-color:var(--c4);
                 //text-shadow: var(--accentG);
                 //box-shadow: inset 0 0 1rem 0.3rem rgba(33, 212, 102, 0.3); // maybe
                 //text-shadow: 0 0 7px rgb(0, 0, 0), 0 0 7px $accent;
             }
+            &:hover:not(.active) {
+                color: var(--accentSL);  
+                box-shadow: inset 0 0 1rem 0.3rem rgba(10, 12, 11, 0.7);
+
+            }
+
+            
 
             
         }
@@ -136,11 +140,12 @@ body {
     //background-image: linear-gradient(to bottom, var(--c1) -5%, var(--accentD) 50%, var(--accentSD));
     //background-image: linear-gradient(-45deg, rgb(24, 24, 24), rgb(46, 46, 46));
     background-color: var(--c2);
+    background-image: linear-gradient(to top, var(--c3) -20%, var(--c4) 80%);
     margin: 0;
     font-family: var(--fNunito); //should find better font
 
     .content {
-        //background-image: linear-gradient(to top, var(--c1),rgba(22, 22, 22, 0.24));
+       
         color: var(--accentS);
         margin: 1rem auto; // TEMP !!!!
         margin-top: $hx + 1;
@@ -171,8 +176,8 @@ footer {
         .container { width: auto }
         .logo { 
             margin-left: 1rem;
-            height: $hx - 1.5rem;
-            width: $hx - 1.5rem;
+            height: $hx - 2.5rem;
+            width: $hx - 1rem;
         }
         height: $hx - 0.5rem;
         
@@ -181,7 +186,9 @@ footer {
 
             &.responsive { //vert nav pops up when pressed menu btn
                 position: relative;  
-                a.icon { position: absolute } 
+                a.icon { position: absolute }
+                a.active { background-color: var(--c1)}
+                a {height: $hx - 0.5rem}
                 ul, li { display: block;}
 
                 li { 
