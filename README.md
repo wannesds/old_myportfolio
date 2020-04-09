@@ -18,6 +18,7 @@ TO DO (find a job!!!!) :
 - make/find a good profile pic
 - (pending) design about>box border and specific banner for each
 - head nav hover tweak effect
+- test
 
 
 
