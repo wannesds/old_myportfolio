@@ -13,6 +13,26 @@
 
     // COLORS
     --c1: #121615;//rgb(18, 22, 21); //rgb(26, 27, 26);
+    --c2: #131d1a;//rgb(7, 36, 25); //rgb(36, 37, 36);
+    --c3: rgb(18, 24, 22);//00331A;//rgb(30, 46, 37);
+    --c4: #1c2422;
+    --c5: rgb(12, 11, 11);
+    //--red: #CC0033; //rgb(187, 20, 75);//rgb(5, 29, 28);
+    --accentL: rgb(22, 209, 153);// #FF9933;
+    --accent: rgb(18, 189, 118); //33FF99
+    --accentSL: rgb(27, 139, 102);//#33CC99;
+    --accentS: rgb(17, 124, 83);
+    --accentSD:  rgb(11, 66, 45);
+    --accentD: rgb(9, 37, 29);//rgb(0, 43, 43); //dark // rename base?
+
+    // SHADOWS/GLOWS/ETC
+    //--accent: cyan;//rgb(122, 231, 198) ;//rgb(102, 204, 153); //rgb(43, 255, 0)
+    --accentG: 0 0 7px rgb(0, 0, 0), 0 0 7px var(--accent); //glow
+    --neulook: -2px -2px 5px 1px rgba(44, 44, 44, 0.4), 2px 2px 5px 1px rgba(15, 15, 15, 0.4);
+    //--accentS: #339999;//rgb(94, 150, 140);//rgb(0, 70, 70);//rgb(54, 92, 54); //shade
+    
+
+    /*==DELETE THIS backup== //--c1: #121615;//rgb(18, 22, 21); //rgb(26, 27, 26);
     --c2: #19201e;//rgb(7, 36, 25); //rgb(36, 37, 36);
     --c3: rgb(18, 24, 22);//00331A;//rgb(30, 46, 37);
     --c4: #1d2c25;
@@ -23,12 +43,7 @@
     --accentSL: #00CC66;//#33CC99;
     --accentS: rgb(48, 134, 91);//339966;
     --accentSD:  rgb(26, 73, 54);
-    --accentD: rgb(19, 41, 32);//rgb(0, 43, 43); //dark // rename base?
-
-    //--accent: cyan;//rgb(122, 231, 198) ;//rgb(102, 204, 153); //rgb(43, 255, 0)
-    --accentG: 0 0 7px rgb(0, 0, 0), 0 0 7px var(--accent); //glow
-    //--accentS: #339999;//rgb(94, 150, 140);//rgb(0, 70, 70);//rgb(54, 92, 54); //shade
- 
+    --accentD: rgb(19, 41, 32);//rgb(0, 43, 43); //dark // rename base?*/
 
     // FONTS
     --fNunito: 'Nunito', 'sans-serif';
@@ -123,7 +138,8 @@ nav {
             }
             &:hover:not(.active) {
                 color: var(--accentSL);  
-                box-shadow: inset 0 0 1rem 0.3rem rgba(10, 12, 11, 0.7);
+                box-shadow: inset 0 0 10px 5px rgba(10, 10, 10, 0.7);
+                //not sure what effect here
 
             }
 
@@ -139,8 +155,8 @@ nav {
 body {
     //background-image: linear-gradient(to bottom, var(--c1) -5%, var(--accentD) 50%, var(--accentSD));
     //background-image: linear-gradient(-45deg, rgb(24, 24, 24), rgb(46, 46, 46));
-    background-color: var(--c2);
-    background-image: linear-gradient(to top, var(--c3) -20%, var(--c4) 80%);
+    //background-color: var(--c4);
+    background-image: linear-gradient(to top, var(--c2) -20%, var(--c4) 80%);
     margin: 0;
     font-family: var(--fNunito); //should find better font
 

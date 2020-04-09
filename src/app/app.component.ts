@@ -10,11 +10,11 @@ export class AppComponent {
   title = 'myportfolio';
 
   OpenVertNav() {
-    var x = document.getElementById("idNav");
-    if (x.className === "nav") {
-      x.className += " responsive";
+    var e = document.getElementById("idNav");
+    if (e.className === "nav") {
+      e.className += " responsive";
     } else {
-      x.className = "nav";
+      e.className = "nav";
     }
   }
 

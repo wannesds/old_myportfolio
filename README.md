@@ -14,10 +14,10 @@ TO DO (find a job!!!!) :
 - add global color 'wheel' under logo as a small easter egg OR add somewhere on home as show-off
 - lookup and add correct Copyrights
 - digitalize some drawings and add subtle on background
-- MAYBE redo logo for something smoother
+- (pending) redo logo for something smoother
 - make/find a good profile pic
-- design about>box border and specific banner for each
-- 
+- (pending) design about>box border and specific banner for each
+- head nav hover tweak effect
 
 
 

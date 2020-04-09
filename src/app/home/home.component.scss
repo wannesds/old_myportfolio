@@ -37,6 +37,7 @@ canvas {
     height: 50vh;
     display: flex;
     margin: auto;
+    box-shadow: var(--neulook);
 }
 
 #boxContainer {
@@ -59,6 +60,8 @@ canvas {
     //background-image: linear-gradient(to top, rgba(3, 37, 37, 0.5), rgba(8, 127, 151, 0.5));
     //background-image: linear-gradient(-170deg, rgb(30, 39, 36) 0% , rgb(19, 27, 23) 60%);
     background-color: var(--c3);
+    box-shadow: var(--neulook);
+    
    
 
     p {
@@ -81,22 +84,25 @@ canvas {
     width: 8rem;
     height: 1.25rem; 
     display: block;
-    border-style: solid;
-    border-width: 0.5px;
     background-color: var(--c4);
-    border-color: var(--accentSD);
-    color: var(--accentS);
     text-decoration-line: none;
     text-align: center;
     font-size: 17px;
-    font-family:var(--fNunito);
+    font-family:var(--fNunito);          
+    color: var(--accentSL);
+    box-shadow: var(--neulook);
+
+    border-style: groove;
+    border-width: 1px;
+    border-color: var(--accent);
+   
     
     &:hover {  //optimize color switch 
         border-style: groove;     
-        border-color:var(--accent);
+        border-color:var(--accentL);
+        border-width: 1px;
         color: var(--accent); 
-        box-shadow: inset 0 0 5px 3px rgba(7, 7, 7, 0.4);
-        //background-color: var(--accentD);
+        box-shadow: inset 0 0 5px 2px rgba(22, 22, 22, 0.4), var(--neulook); //add neulook or not
     }
 }
 
